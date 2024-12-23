@@ -89,7 +89,7 @@ const games = ` [
     "img": "./assets/kingdom_death.png"
   }
 ]
-`
+`;
 const template = `
 {
 "name": "",
@@ -99,6 +99,8 @@ const template = `
 "backers": 0,
 "img": ""
 },
-`
+`;
+
+// let totalBackers = games.reduce((total, game) => total + game.backers, 0);
 
 export default games;

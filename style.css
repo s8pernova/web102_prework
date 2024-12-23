@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
+:root {
+	--primary-color: #26333c;
+	--secondary-color: #a8b0bc;
+	--text-color: white;
+}
+
 body {
 	font-family: "Cabin";
 	margin: 0;
 	padding: 0;
-	background-color: #26333c;
+	background-color: var(--primary-color);
 }
 
 #tentacles {
@@ -29,7 +35,7 @@ header {
 }
 
 .stats-card {
-	background-color: #a8b0bc;
+	background-color: var(--secondary-color);
 	border-radius: 7px;
 	padding: 1%;
 	margin: 1%;
@@ -62,14 +68,21 @@ header {
 	width: 300px;
 	text-align: center;
 	border-radius: 7px;
+	transition: transform 0.3s ease;
+	overflow: hidden;
 }
 
 .game-card:hover {
 	cursor: pointer;
 	box-shadow: 0 0 30px lightblue;
+	transform: scale(1.05);
 }
 
-#button-container {
+.game-card-description {
+	text-align: left;
+}
+
+.button-container {
 	text-align: center;
 }
 
@@ -97,7 +110,7 @@ button {
 
 .hero-image {
 	width: 100%;
-	height: 450px;
+	height: 50vh;
 	background-image: url("assets/sea-monster-attack.jpg");
 	background-size: cover;
 	background-position: center;
@@ -109,6 +122,13 @@ button {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--text-color);
+	text-shadow: 0px 0px 10px black;
+	letter-spacing: 2px;
+	font-size: 20px;
+	position: relative;
+	z-index: 2;
 }
 
 .grid-container {
@@ -117,20 +137,36 @@ button {
 
 #about-us-text {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
+	color: var(--text-color);
 	/* margin-left: 300px; */
 }
 
-.about-us-section {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 16px;
+#about-us-info {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--text-color);
+	height: 100%;
+	text-align: left;
+	padding-left: 20px;
+	align-items: center;
+	display: flex;
 }
 
-.box {
-	border: 1px solid white;
-	padding: 16px;
+/* #unfunded-games {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--text-color);
+} */
+
+.about-us-section {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	/* grid-template-rows: auto auto;
+	gap: 16px; */
+}
+
+.grid-container div {
+	/* background-color: white; */
 	text-align: center;
+	/* border: 1px solid white; */
 }
 
 main {
@@ -145,10 +181,14 @@ main {
 	left: 0;
 	right: 0;
 	height: 400px;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #26333c);
+	background: linear-gradient(
+		to bottom,
+		rgb(255, 255, 255, 0),
+		var(--primary-color)
+	);
 }
 
-#logo-text {
+/* #logo-text {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: white;
 	text-shadow: 0px 0px 10px black;
@@ -156,7 +196,7 @@ main {
 	font-size: 20px;
 	position: relative;
 	z-index: 2;
-}
+} */
 
 .rotated-text {
 	margin: 70px;
@@ -165,7 +205,7 @@ main {
 	width: 100px;
 	text-align: center;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
+	color: var(--text-color);
 	text-shadow: 0px 0px 10px black;
 	/* letter-spacing: 2px; */
 	font-size: 20px;
@@ -175,4 +215,11 @@ main {
 	display: inline-block;
 	transform: scaleY(2);
 	transform-origin: bottom;
+}
+
+.info-container {
+	width: 92%;
+	margin: auto;
+	height: 100%;
+	/* border: 2px solid white; */
 }
