@@ -2,21 +2,26 @@
 
 body {
 	font-family: "Cabin";
-	background-color: #758190;
+	margin: 0;
+	padding: 0;
+	background-color: #26333c;
 }
 
 #tentacles {
 	width: 50px;
 }
 
-.header {
-	display: flex;
+header {
+	/* display: flex;
 	background-color: lightblue;
 	padding: 1%;
 	align-items: center;
 	margin-left: -10px;
 	margin-right: -10px;
-	margin-top: -10px;
+	margin-top: -10px; */
+	position: relative;
+	width: 100%;
+	height: 400px;
 }
 
 .stats-container {
@@ -86,10 +91,88 @@ button {
 	margin-right: auto;
 }
 
-#center-align {
+.center-align {
 	text-align: center;
 }
 
-/* .header-text {
-    pass
-} */
+.hero-image {
+	width: 100%;
+	height: 450px;
+	background-image: url("assets/sea-monster-attack.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.header-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.grid-container {
+	display: grid;
+}
+
+#about-us-text {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
+	/* margin-left: 300px; */
+}
+
+.about-us-section {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.box {
+	border: 1px solid white;
+	padding: 16px;
+	text-align: center;
+}
+
+main {
+	position: relative;
+	z-index: 1;
+}
+
+.hero-image::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 400px;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #26333c);
+}
+
+#logo-text {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
+	text-shadow: 0px 0px 10px black;
+	letter-spacing: 2px;
+	font-size: 20px;
+	position: relative;
+	z-index: 2;
+}
+
+.rotated-text {
+	margin: 70px;
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	width: 100px;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: white;
+	text-shadow: 0px 0px 10px black;
+	/* letter-spacing: 2px; */
+	font-size: 20px;
+}
+
+.stretched-text {
+	display: inline-block;
+	transform: scaleY(2);
+	transform-origin: bottom;
+}
