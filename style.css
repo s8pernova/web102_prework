@@ -2,8 +2,9 @@
 
 :root {
 	--primary-color: #26333c;
-	--secondary-color: #a8b0bc;
-	--text-color: white;
+	--secondary-color: rgb(238, 238, 238); /* #a8b0b */
+	--primary-text-color: white;
+	--secondary-text-color: black;
 }
 
 body {
@@ -36,11 +37,12 @@ header {
 
 .stats-card {
 	background-color: var(--secondary-color);
-	border-radius: 7px;
+	border-radius: 4px;
 	padding: 1%;
 	margin: 1%;
 	width: 100%;
 	text-align: center;
+	box-shadow: 0px 0px 5px black;
 }
 
 #num-contributions,
@@ -62,7 +64,7 @@ header {
 }
 
 .game-card {
-	background-color: #ffffff;
+	background-color: var(--secondary-color);
 	padding: 1%;
 	margin: 1%;
 	width: 300px;
@@ -91,7 +93,10 @@ button {
 	border: none;
 	padding: 1%;
 	margin: 1%;
-	border-radius: 7px;
+	border-radius: 7em;
+	width: 25%;
+	background-color: var(--secondary-color);
+	color: var(--secondary-text-color);
 }
 
 /* #description-container {
@@ -123,7 +128,7 @@ button {
 	align-items: center;
 	height: 100%;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--text-color);
+	color: var(--primary-text-color);
 	text-shadow: 0px 0px 10px black;
 	letter-spacing: 2px;
 	font-size: 20px;
@@ -137,18 +142,30 @@ button {
 
 #about-us-text {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--text-color);
+	color: var(--primary-text-color);
+	text-shadow: 0px 0px 10px black;
+	font-size: 20px;
+	/* border: 2px solid red; */
+	/* text-align: right; */
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	letter-spacing: 5px;
 	/* margin-left: 300px; */
 }
 
 #about-us-info {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--text-color);
+	color: var(--primary-text-color);
 	height: 100%;
 	text-align: left;
-	padding-left: 20px;
-	align-items: center;
+	/* padding-left: 20px; */
+	padding-right: 20px;
+	/* align-items: center; */
+	justify-content: center;
 	display: flex;
+	flex-direction: column;
+	/* border: 2px solid white; */
 }
 
 /* #unfunded-games {
@@ -159,8 +176,13 @@ button {
 .about-us-section {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
-	/* grid-template-rows: auto auto;
-	gap: 16px; */
+	/* grid-template-rows: auto auto; */
+	gap: 25px;
+	/* border: 2px solid white; */
+	margin: 2%;
+	/* align-items: center;
+	align-self: center;
+	text-align: center; */
 }
 
 .grid-container div {
@@ -199,27 +221,18 @@ main {
 } */
 
 .rotated-text {
-	margin: 70px;
-	-ms-transform: rotate(-90deg);
+	/* margin: 70px; */
 	transform: rotate(-90deg);
-	width: 100px;
-	text-align: center;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--text-color);
-	text-shadow: 0px 0px 10px black;
-	/* letter-spacing: 2px; */
-	font-size: 20px;
 }
 
 .stretched-text {
-	display: inline-block;
-	transform: scaleY(2);
-	transform-origin: bottom;
+	display: flex;
+	transform: scaleY(4);
 }
 
-.info-container {
+/* .info-container {
 	width: 92%;
 	margin: auto;
 	height: 100%;
-	/* border: 2px solid white; */
-}
+	border: 2px solid white;
+} */
