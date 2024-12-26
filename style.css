@@ -210,16 +210,6 @@ main {
 	);
 }
 
-/* #logo-text {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
-	text-shadow: 0px 0px 10px black;
-	letter-spacing: 2px;
-	font-size: 20px;
-	position: relative;
-	z-index: 2;
-} */
-
 .rotated-text {
 	/* margin: 70px; */
 	transform: rotate(-90deg);
