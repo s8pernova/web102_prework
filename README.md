@@ -26,25 +26,18 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./assets/walkthrough-video.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-
-GIF created with ...
-
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [Ezgif](https://ezgif.com/)
 
 ## Notes
 
 <!-- Describe any challenges encountered while building the app. -->
 
 - Getting the hero image, along with the gradient transition, added on approximately 3 hours to the project - half of which was spent looking up how to do it and the other half was me being a perfectionist.
-<!-- - In an effort to conserve time, I did not make the website responsive; for now, it looks best on a 3x4 screen. -->
 - I had a hard time getting the total amount of underfunded games, even though it seemed like it would be an easy JavaScript for loop. As a result, the code may look janky and unprofessional.
 - Another hard thing was designing the UI/UX for the site. I do not have any certifications in UI/UX design, but I still tried my best to make this site stand out from the crowd in an effort to learn all I can about CSS.
+- The hardest part was learning/relearning the many JavaScript functions that I used.
 
 ## License
 
