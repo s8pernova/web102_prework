@@ -101,6 +101,4 @@ const template = `
 },
 `;
 
-// let totalBackers = games.reduce((total, game) => total + game.backers, 0);
-
 export default games;

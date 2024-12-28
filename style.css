@@ -3,8 +3,7 @@
 :root {
 	--primary-color: #26333c;
 	--secondary-color: rgb(238, 238, 238); /* #a8b0b */
-	--primary-text-color: white;
-	--secondary-text-color: black;
+	cursor: default;
 }
 
 body {
@@ -43,18 +42,27 @@ header {
 	width: 100%;
 	text-align: center;
 	box-shadow: 0px 0px 5px black;
+	color: var(--primary-color);
 }
 
 #num-contributions,
-#total-raised,
+#total-raised {
+	font-size: 4em;
+	color: green;
+	font-family: monospace;
+}
+
 #num-games {
-	font-size: 50px;
+	font-size: 4em;
+	color: var(--primary-color);
+	font-family: monospace;
 }
 
 #games-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	color: var(--primary-color);
 }
 
 .game-img {
@@ -88,7 +96,7 @@ header {
 	text-align: center;
 }
 
-button {
+.button-container button {
 	font-family: "Cabin";
 	border: none;
 	padding: 1%;
@@ -96,12 +104,18 @@ button {
 	border-radius: 7em;
 	width: 25%;
 	background-color: var(--secondary-color);
-	color: var(--secondary-text-color);
+	color: var(--primary-color);
+	transition: transform 0.3s ease;
 }
 
-/* #description-container {
-	background-color: aqua;
-} */
+.button-container button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 30px lightblue;
+}
+
+.button-container button:active {
+	transform: scale(0.9);
+}
 
 .center {
 	max-width: fit-content;
@@ -128,7 +142,7 @@ button {
 	align-items: center;
 	height: 100%;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--primary-text-color);
+	color: var(--secondary-color);
 	text-shadow: 0px 0px 10px black;
 	letter-spacing: 2px;
 	font-size: 20px;
@@ -142,7 +156,7 @@ button {
 
 #about-us-text {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--primary-text-color);
+	color: var(--secondary-color);
 	text-shadow: 0px 0px 10px black;
 	font-size: 20px;
 	/* border: 2px solid red; */
@@ -154,9 +168,9 @@ button {
 	/* margin-left: 300px; */
 }
 
-#about-us-info {
+#description-container {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: var(--primary-text-color);
+	color: var(--secondary-color);
 	height: 100%;
 	text-align: left;
 	/* padding-left: 20px; */
@@ -226,3 +240,28 @@ main {
 	height: 100%;
 	border: 2px solid white;
 } */
+
+#our-games {
+	font-family: monospace;
+	color: var(--secondary-color);
+	text-align: center;
+	letter-spacing: 10px;
+	font-size: 5em;
+	transform: scaleY(0.75);
+	text-shadow: 0px 0px 10px black;
+}
+
+#first-game,
+#second-game {
+	font-size: 2em;
+	color: var(--primary-color);
+	/* font-style: oblique; */
+}
+
+.footer-container {
+	background-color: #313b42;
+	text-align: center;
+	color: var(--secondary-color);
+	padding: 20px 10%;
+	margin-top: 3%;
+}
