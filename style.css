@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
 
+:root {
+	--primary-color: #26333c;
+	--secondary-color: rgb(238, 238, 238); /* #a8b0b */
+	cursor: default;
+}
+
 body {
 	font-family: "Cabin";
 	margin: 0;
 	padding: 0;
-	background-color: #26333c;
+	background-color: var(--primary-color);
 }
 
 #tentacles {
@@ -29,24 +35,34 @@ header {
 }
 
 .stats-card {
-	background-color: #a8b0bc;
-	border-radius: 7px;
+	background-color: var(--secondary-color);
+	border-radius: 4px;
 	padding: 1%;
 	margin: 1%;
 	width: 100%;
 	text-align: center;
+	box-shadow: 0px 0px 5px black;
+	color: var(--primary-color);
 }
 
 #num-contributions,
-#total-raised,
+#total-raised {
+	font-size: 4em;
+	color: green;
+	font-family: monospace;
+}
+
 #num-games {
-	font-size: 50px;
+	font-size: 4em;
+	color: var(--primary-color);
+	font-family: monospace;
 }
 
 #games-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	color: var(--primary-color);
 }
 
 .game-img {
@@ -56,34 +72,50 @@ header {
 }
 
 .game-card {
-	background-color: #ffffff;
+	background-color: var(--secondary-color);
 	padding: 1%;
 	margin: 1%;
 	width: 300px;
 	text-align: center;
 	border-radius: 7px;
+	transition: transform 0.3s ease;
+	overflow: hidden;
 }
 
 .game-card:hover {
 	cursor: pointer;
 	box-shadow: 0 0 30px lightblue;
+	transform: scale(1.05);
 }
 
-#button-container {
+.game-card-description {
+	text-align: left;
+}
+
+.button-container {
 	text-align: center;
 }
 
-button {
+.button-container button {
 	font-family: "Cabin";
 	border: none;
 	padding: 1%;
 	margin: 1%;
-	border-radius: 7px;
+	border-radius: 7em;
+	width: 25%;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	transition: transform 0.3s ease;
 }
 
-/* #description-container {
-	background-color: aqua;
-} */
+.button-container button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 30px lightblue;
+}
+
+.button-container button:active {
+	transform: scale(0.9);
+}
 
 .center {
 	max-width: fit-content;
@@ -97,7 +129,7 @@ button {
 
 .hero-image {
 	width: 100%;
-	height: 450px;
+	height: 50vh;
 	background-image: url("assets/sea-monster-attack.jpg");
 	background-size: cover;
 	background-position: center;
@@ -109,6 +141,13 @@ button {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--secondary-color);
+	text-shadow: 0px 0px 10px black;
+	letter-spacing: 2px;
+	font-size: 20px;
+	position: relative;
+	z-index: 2;
 }
 
 .grid-container {
@@ -117,20 +156,53 @@ button {
 
 #about-us-text {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
+	color: var(--secondary-color);
+	text-shadow: 0px 0px 10px black;
+	font-size: 20px;
+	/* border: 2px solid red; */
+	/* text-align: right; */
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	letter-spacing: 5px;
 	/* margin-left: 300px; */
 }
 
-.about-us-section {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 16px;
+#description-container {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--secondary-color);
+	height: 100%;
+	text-align: left;
+	/* padding-left: 20px; */
+	padding-right: 20px;
+	/* align-items: center; */
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid white; */
 }
 
-.box {
-	border: 1px solid white;
-	padding: 16px;
+/* #unfunded-games {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: var(--text-color);
+} */
+
+.about-us-section {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	/* grid-template-rows: auto auto; */
+	gap: 25px;
+	/* border: 2px solid white; */
+	margin: 2%;
+	/* align-items: center;
+	align-self: center;
+	text-align: center; */
+}
+
+.grid-container div {
+	/* background-color: white; */
 	text-align: center;
+	/* border: 1px solid white; */
 }
 
 main {
@@ -145,34 +217,51 @@ main {
 	left: 0;
 	right: 0;
 	height: 400px;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #26333c);
-}
-
-#logo-text {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
-	text-shadow: 0px 0px 10px black;
-	letter-spacing: 2px;
-	font-size: 20px;
-	position: relative;
-	z-index: 2;
+	background: linear-gradient(
+		to bottom,
+		rgb(255, 255, 255, 0),
+		var(--primary-color)
+	);
 }
 
 .rotated-text {
-	margin: 70px;
-	-ms-transform: rotate(-90deg);
+	/* margin: 70px; */
 	transform: rotate(-90deg);
-	width: 100px;
-	text-align: center;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	color: white;
-	text-shadow: 0px 0px 10px black;
-	/* letter-spacing: 2px; */
-	font-size: 20px;
 }
 
 .stretched-text {
-	display: inline-block;
-	transform: scaleY(2);
-	transform-origin: bottom;
+	display: flex;
+	transform: scaleY(4);
+}
+
+/* .info-container {
+	width: 92%;
+	margin: auto;
+	height: 100%;
+	border: 2px solid white;
+} */
+
+#our-games {
+	font-family: monospace;
+	color: var(--secondary-color);
+	text-align: center;
+	letter-spacing: 10px;
+	font-size: 5em;
+	transform: scaleY(0.75);
+	text-shadow: 0px 0px 10px black;
+}
+
+#first-game,
+#second-game {
+	font-size: 2em;
+	color: var(--primary-color);
+	/* font-style: oblique; */
+}
+
+.footer-container {
+	background-color: #313b42;
+	text-align: center;
+	color: var(--secondary-color);
+	padding: 20px 10%;
+	margin-top: 3%;
 }
