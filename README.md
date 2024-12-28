@@ -38,6 +38,7 @@ GIF created with [Ezgif](https://ezgif.com/)
 - I had a hard time getting the total amount of underfunded games, even though it seemed like it would be an easy JavaScript for loop. As a result, the code may look janky and unprofessional.
 - Another hard thing was designing the UI/UX for the site. I do not have any certifications in UI/UX design, but I still tried my best to make this site stand out from the crowd in an effort to learn all I can about CSS.
 - The hardest part was learning/relearning the many JavaScript functions that I used.
+- It may have taken around twelve hours, but I think it was worth it; I learned a lot about JavaScript, CSS, and HTML, and this project got me excited to learn more.
 
 ## License
 
