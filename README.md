@@ -1,6 +1,6 @@
 # WEB102 Prework - Sea Monster
 
-Submitted by: **Aidan H.**
+Submitted by: **Aidan Hoo**
 
 **Sea Monster** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
@@ -41,7 +41,7 @@ GIF created with [Ezgif](https://ezgif.com/)
 
 ## License
 
-    Copyright 2024 Aidan H.
+    Copyright 2024 Aidan Hoo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
